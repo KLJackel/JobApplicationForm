@@ -1,16 +1,27 @@
-# React + Vite
+# Job Application Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, user-friendly web application designed to streamline the job application process. This project allows candidates to input their personal details, qualifications, experience, and upload resumes seamlessly through an intuitive user interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Design:** Fully optimized for desktops, tablets, and mobile devices.
+- **Form Validation:** Client-side (and server-side) input validation to ensure accurate data entry (e.g., email format, required fields).
+- **Modern UI/UX:** Clean and accessible styling for an enhanced user experience.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend:**
+- HTML5 / CSS3
+- JavaScript (ES6+)
+- React.js
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+├── src/                  # Source files for frontend
+│   ├── components/       # Reusable UI components
+│   └── styles/           # CSS stylesheets
+├── backend/              # Server-side code (if applicable)
+├── public/               # Static assets (images, icons)
+├── index.html            # Main HTML file
+└── README.md             # Project documentation
