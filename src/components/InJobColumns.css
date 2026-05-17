@@ -1,0 +1,36 @@
+.JobStateArt {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.jobBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.jobStatBox {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px;
+    gap: 5px;
+}
+
+.textArticle {
+    font-size:  1.2em;
+}
+
+.jobDelete {
+    margin-right: 5px;
+    border: solid 1px black ;
+}
+
+.deleteIcon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

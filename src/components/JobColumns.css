@@ -1,0 +1,15 @@
+.hdStatus {
+    text-align: center;
+}
+
+.headerfunc {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.columns1 {
+    background-color:beige;
+    width: 33.33%;
+    margin: 10px 15px;
+    text-align: center;
+}
