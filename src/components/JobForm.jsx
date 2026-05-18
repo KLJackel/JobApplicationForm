@@ -21,8 +21,8 @@ const callSubmitForm = (e) => {
     e.preventDefault();
 }
 
-const selectCategory = (e) => {
-    setActivityformdata({...activityformdata, category: [e.target.value]})
+const selectCategory = ({value}) => {
+    setActivityformdata({...activityformdata, category: {value}})
 }
 
 const handleJobStatus = (e) => {
@@ -43,7 +43,7 @@ const selectCategory = (cat) => {
     }
 }
     */
-console.log(activityformdata)
+console.log(activityformdata.category)
 
   return (
     <div className='form-header'>
@@ -51,9 +51,9 @@ console.log(activityformdata)
             <input className='bot-input' type="text" placeholder="Enter job title" onChange={(e) => setActivityformdata({...activityformdata, activity:e.target.value})}></input>
             <div className='form-details'>
                 <div className='bottom-line'>
-                    <FormButtons value="Read emails" onClick={selectCategory}/>
-                    <FormButtons value="Send emails" onClick={selectCategory}/>
-                    <FormButtons value="Web Parsing" onClick={selectCategory}/>                    
+                    <FormButtons value="Read emails" onClick={() =>selectCategory("Read emails")}/>
+                    <FormButtons value="Send emails" onClick={() =>selectCategory("Send emails")}/>
+                    <FormButtons value="Web Parsing" onClick={() =>selectCategory("Web Parsing")}/>                    
                 </div>
             </div>
             <select className='job-status' onChange={handleJobStatus} >
