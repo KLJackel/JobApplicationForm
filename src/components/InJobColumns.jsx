@@ -3,14 +3,16 @@ import { FormButtons } from './FormButtons'
 import { Trash2 } from 'lucide-react'
 import './InJobColumns.css'
 
-export const InJobColumns = () => {
+export const InJobColumns = ({activity, category, index}) => {
   return (
     <article className='jobStateArt'>
-        <p className='textArticle'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab iusto recusandae, dolor quia quae earum tenetur nesciunt veniam pariatur! Possimus rem nam blanditiis fuga corporis voluptatibus ut veniam voluptatem voluptates.</p>
+        <p className='textArticle'>{activity}</p>
         <div className="jobBox">
-            <div className='jobStatBox'>
-                <FormButtons value='Parse Emails' />
-                <FormButtons value='SAP Extraction' />
+        <div className='jobStatBox'>
+            {category.map((cat, index) =>  {
+                <FormButtons key={index} value={cat} />
+                })}
+                
             </div>
            <div className='jobDelete'>
                 <Trash2 className='deleteIcon'/>

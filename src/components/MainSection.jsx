@@ -15,9 +15,9 @@ function MainSection() {
         <JobForm setJobs={setJob}/>
         <p>Details for jobs</p>
         <main className='headerfunc'>
-            <JobColumns imgIcon={<ListCheck />} status='Need to Complete' />
-            <JobColumns imgIcon={<FileStack />} status='In Progress'/>
-            <JobColumns imgIcon={<FileCheck />} status='Completed'/>
+            <JobColumns imgIcon={<ListCheck />} status='Need to Complete' job={job}/>
+            <JobColumns imgIcon={<FileStack />} status='In Progress'job={job}/>
+            <JobColumns imgIcon={<FileCheck />} status='Completed'job={job}/>
         </main>
     </>
 )

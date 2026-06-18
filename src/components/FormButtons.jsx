@@ -15,8 +15,8 @@ export const FormButtons = ({value, onClickHandler}) => {
   return (
     <div>
         <button type='button'
-        onClick={()=>onClickHandler(value)} 
         className='btn' 
+        onClick={()=>onClickHandler(value)} 
         >{value}</button>
         
     </div>

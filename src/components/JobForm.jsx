@@ -1,19 +1,17 @@
 import React, { useState} from 'react'
 import { FormButtons } from './FormButtons'
 
-function JobForm() {
+function JobForm({setJobs}) {
 
 const [activityformdata, setActivityformdata] =useState(
     {activity: "",
     category: '',
     status: "Need to Complete"}
 )
-const [jobs, setJobs] = useState([])
 const [activeBtn, setActiveBtn] = useState(false)
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(activityformdata)
     setJobs(prev => {
         return [...prev, activityformdata]
     })
@@ -32,12 +30,11 @@ const handleJobStatus = (e) => {
 }
 
 
-console.log(activityformdata)
 /*console.log(activeBtn)*/
 
   return (
     <div className='form-header'>
-        <form>
+        <form onSubmit={handleSubmit}>
             <input className='bot-input' type="text" placeholder="Enter job title" onChange={(e) => setActivityformdata({...activityformdata, activity:e.target.value})}></input>
             <div className='form-details'>
                 <div className='bottom-line'>
